@@ -1,6 +1,6 @@
 # Backlog Triage Pre-Read
 
-![Triage pre-read hero](assets/hero.png)
+![Triage pre-read hero](assets/hero.svg)
 
 An Inngest-powered Monday-morning agent for PMs. Every Monday at 7:00 AM (ET)
 it fetches new/changed tickets from your backlog, classifies them, flags likely

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Backlog triage pre-read — autonomous PM agent">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0b14"/>
+      <stop offset="1" stop-color="#141428"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e1e32"/>
+      <stop offset="1" stop-color="#161624"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- ambient glows -->
+  <circle cx="200" cy="120" r="130" fill="#7c3aed" opacity="0.16" filter="url(#glow)"/>
+  <circle cx="1020" cy="520" r="150" fill="#4f46e5" opacity="0.14" filter="url(#glow)"/>
+
+  <!-- title block -->
+  <text x="80" y="120" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="600" fill="#8b8ba3" letter-spacing="4">FINCH PM AGENTS</text>
+  <text x="76" y="196" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="64" font-weight="800" fill="#ffffff">Backlog Triage</text>
+  <text x="78" y="252" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="64" font-weight="800" fill="url(#accent)">Pre-Read</text>
+  <text x="80" y="300" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="21" fill="#a7a7c0">Monday 7:00 AM ET · fetch → classify → dedupe → prioritize</text>
+
+  <!-- pipeline chips -->
+  <g font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="600">
+    <rect x="80" y="340" width="120" height="40" rx="20" fill="#1e1e32" stroke="#7c3aed" stroke-opacity="0.5"/>
+    <text x="140" y="366" text-anchor="middle" fill="#c9c9e0">fetch</text>
+    <rect x="220" y="340" width="120" height="40" rx="20" fill="#1e1e32" stroke="#7c3aed" stroke-opacity="0.5"/>
+    <text x="280" y="366" text-anchor="middle" fill="#c9c9e0">classify</text>
+    <rect x="360" y="340" width="120" height="40" rx="20" fill="#1e1e32" stroke="#7c3aed" stroke-opacity="0.5"/>
+    <text x="420" y="366" text-anchor="middle" fill="#c9c9e0">dedupe</text>
+    <rect x="500" y="340" width="140" height="40" rx="20" fill="url(#accent)"/>
+    <text x="570" y="366" text-anchor="middle" fill="#ffffff">prioritize</text>
+  </g>
+
+  <!-- kanban board -->
+  <g>
+    <rect x="80" y="420" width="560" height="150" rx="14" fill="#101020" stroke="#ffffff" stroke-opacity="0.08"/>
+    <g font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#8b8ba3">
+      <text x="104" y="448">NEW</text><text x="264" y="448">IN TRIAGE</text><text x="424" y="448">PRIORITIZED</text>
+    </g>
+    <!-- cards -->
+    <rect x="100" y="460" width="140" height="88" rx="8" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+    <rect x="112" y="472" width="60" height="10" rx="5" fill="#7c3aed" opacity="0.8"/>
+    <rect x="112" y="490" width="116" height="8" rx="4" fill="#3a3a58"/>
+    <rect x="112" y="504" width="88" height="8" rx="4" fill="#2c2c46"/>
+    <rect x="112" y="522" width="34" height="14" rx="7" fill="#4f46e5" opacity="0.35"/>
+
+    <rect x="260" y="460" width="140" height="88" rx="8" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+    <rect x="272" y="472" width="48" height="10" rx="5" fill="#22d3ee" opacity="0.8"/>
+    <rect x="272" y="490" width="116" height="8" rx="4" fill="#3a3a58"/>
+    <rect x="272" y="504" width="96" height="8" rx="4" fill="#2c2c46"/>
+    <rect x="272" y="522" width="34" height="14" rx="7" fill="#22d3ee" opacity="0.3"/>
+
+    <rect x="420" y="460" width="140" height="88" rx="8" fill="url(#card)" stroke="#7c3aed" stroke-opacity="0.45"/>
+    <rect x="432" y="472" width="56" height="10" rx="5" fill="#a78bfa"/>
+    <rect x="432" y="490" width="116" height="8" rx="4" fill="#3a3a58"/>
+    <rect x="432" y="504" width="80" height="8" rx="4" fill="#2c2c46"/>
+    <rect x="432" y="522" width="40" height="14" rx="7" fill="#a78bfa" opacity="0.4"/>
+    <text x="452" y="533" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#d6c9ff">P0</text>
+
+    <!-- duplicate link -->
+    <path d="M240 504 C 252 504, 252 504, 260 504" stroke="#f472b6" stroke-width="2" stroke-dasharray="5 4" opacity="0.9"/>
+    <text x="228" y="492" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#f472b6">dup 80%</text>
+  </g>
+
+  <!-- agent node cluster (right) -->
+  <g>
+    <circle cx="880" cy="200" r="64" fill="url(#accent)" filter="url(#glow)"/>
+    <circle cx="880" cy="200" r="64" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+    <!-- simple bot mark -->
+    <rect x="856" y="178" width="48" height="40" rx="10" fill="#ffffff" opacity="0.95"/>
+    <circle cx="870" cy="196" r="6" fill="#4f46e5"/>
+    <circle cx="890" cy="196" r="6" fill="#4f46e5"/>
+    <rect x="872" y="210" width="16" height="4" rx="2" fill="#4f46e5" opacity="0.6"/>
+    <line x1="880" y1="178" x2="880" y2="162" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="880" cy="156" r="5" fill="#a78bfa"/>
+
+    <!-- satellite nodes -->
+    <g stroke="#7c3aed" stroke-opacity="0.55" stroke-width="2">
+      <line x1="880" y1="200" x2="760" y2="120"/><line x1="880" y1="200" x2="1010" y2="130"/>
+      <line x1="880" y1="200" x2="750" y2="320"/><line x1="880" y1="200" x2="1020" y2="330"/>
+      <line x1="880" y1="200" x2="880" y2="420"/>
+    </g>
+    <g fill="#1e1e32" stroke="#7c3aed" stroke-opacity="0.6" stroke-width="2">
+      <circle cx="760" cy="120" r="22"/><circle cx="1010" cy="130" r="22"/>
+      <circle cx="750" cy="320" r="22"/><circle cx="1020" cy="330" r="22"/>
+      <circle cx="880" cy="420" r="22"/>
+    </g>
+    <g font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#c9c9e0" text-anchor="middle">
+      <text x="760" y="126">◷</text><text x="1010" y="136">✦</text>
+      <text x="750" y="326">≡</text><text x="1020" y="336">✓</text>
+      <text x="880" y="426">✉</text>
+    </g>
+    <g font-family="Inter, sans-serif" font-size="13" fill="#8b8ba3" text-anchor="middle">
+      <text x="760" y="158">cron</text><text x="1010" y="168">classify</text>
+      <text x="750" y="358">dedupe</text><text x="1020" y="368">report</text>
+      <text x="880" y="458">notify</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <text x="80" y="606" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="16" fill="#5b5b78">Durable steps · retries · sleep-until — powered by Inngest</text>
+  <text x="1120" y="606" font-family="Inter, sans-serif" font-size="16" fill="#5b5b78" text-anchor="end">TypeScript</text>
+</svg>
